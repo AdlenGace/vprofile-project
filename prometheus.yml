@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'vproapp'
+    static_configs:
+      - targets: ['vproapp:8080']
+
+  - job_name: 'vprodb'
+    static_configs:
+      - targets: ['vprodb:3306']
+
+  - job_name: 'vprocache01'
+    static_configs:
+      - targets: ['vprocache01:11211']
+
+  - job_name: 'vpromq01'
+    static_configs:
+      - targets: ['vpromq01:15672']
